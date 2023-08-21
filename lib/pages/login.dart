@@ -120,6 +120,7 @@ class _registerScreenState extends State<registerScreen> {
                           usernameEmpty = true;
                         else {
                           Character.username = textController.text;
+                          Character.tribes = tribesValue;
                           Navigator.of(context).pushNamed('/profile');
                         }
                       });

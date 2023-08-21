@@ -3,6 +3,7 @@ import 'pages/login.dart';
 import 'pages/profile.dart';
 import 'pages/inventory.dart';
 import 'pages/shop.dart';
+import 'pages/battle.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => ProfileScreen(),
         '/inventory': (context) => InventoryScreen(),
         '/shop': (context) => ShopScreen(),
+        '/battle': (context) => BattleSscreen(),
       },
       theme: ThemeData(
         inputDecorationTheme: InputDecorationTheme(
