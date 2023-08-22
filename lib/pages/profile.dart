@@ -31,12 +31,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Container(
             height: 175,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 60, vertical: 20),
+                    padding: const EdgeInsets.only(
+                      left: 40,
+                      top: 20,
+                      bottom: 20,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -45,7 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           Character.username,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 22,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -53,40 +56,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           '${Character.tribes} / Lv. ${Character.lv}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 15,
                           ),
                         ),
                         Text(
                           'Gold       : 100 ',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 15,
                           ),
                         ),
                         Text(
-                          'Weapon :',
+                          'Weapon : Darkblood Stormking',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 15,
                           ),
                         ),
                         Text(
                           'Armor    :',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 15,
                           ),
                         ),
                       ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 50),
-                  child: Image(
-                    image: AssetImage(
-                      'assets/${Character.tribes}.png',
-                    ),
+                Image(
+                  image: AssetImage(
+                    'assets/${Character.tribes}.png',
                   ),
                 ),
               ],
@@ -104,8 +104,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width / 2,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 50),
+                      child: Center(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -145,8 +144,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width / 2,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Center(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
