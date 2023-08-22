@@ -82,14 +82,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 0),
-                  child: Text(
-                    'Image',
-                    style: TextStyle(
-                      color: Colors.white,
+                  padding: const EdgeInsets.only(right: 50),
+                  child: Image(
+                    image: AssetImage(
+                      'assets/${Character.tribes}.png',
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
