@@ -38,7 +38,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     padding: const EdgeInsets.only(
                       left: 40,
                       top: 20,
-                      bottom: 20,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,10 +92,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 35,
           ),
           Container(
-            height: 325,
+            height: 300,
             child: Column(
               children: [
                 Row(
@@ -185,7 +184,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ],
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 35,
                 ),
                 Container(
                   child: Column(
