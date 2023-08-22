@@ -1,1 +1,2 @@
-*.dart linguist-detectable=false
+*.C++ linguist-detectable=false
+*.CMake linguist-detectable=false
