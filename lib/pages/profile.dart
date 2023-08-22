@@ -66,14 +66,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         ),
                         Text(
-                          'Weapon : Darkblood Stormking',
+                          'Weapon : ',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
                           ),
                         ),
                         Text(
-                          'Armor    :',
+                          'Armor    : ',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 15,
@@ -243,7 +243,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   label: Text(
                     'Battle',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 215, 215, 255),
+                      color: Colors.white,
                     ),
                   ),
                   onPressed: () {
@@ -251,7 +251,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   },
                   icon: Icon(
                     Icons.forest,
-                    color: Colors.purple,
+                    color: Colors.white,
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 98, 82, 70),
@@ -261,7 +261,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   label: Text(
                     'Shop',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 215, 215, 255),
+                      color: Colors.white,
                     ),
                   ),
                   onPressed: () {
@@ -269,7 +269,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   },
                   icon: Icon(
                     Icons.shopping_cart,
-                    color: Colors.purple,
+                    color: Colors.white,
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 98, 82, 70),
@@ -279,7 +279,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   label: Text(
                     'Inventory',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 215, 215, 255),
+                      color: Colors.white,
                     ),
                   ),
                   onPressed: () {
@@ -290,7 +290,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   icon: Icon(
                     Icons.backpack_sharp,
-                    color: Colors.purple,
+                    color: Colors.white,
                   ),
                 )
               ],
