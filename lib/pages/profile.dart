@@ -26,276 +26,187 @@ class _ProfileScreenState extends State<ProfileScreen> {
         centerTitle: true,
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: 175,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                  child: Padding(
+            width: MediaQuery.of(context).size.width,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 40,
+                right: 40,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Image(
+                    image: AssetImage('assets/Warrior.png'),
+                    width: 200,
+                    height: 200,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text(
+                      "TORA",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 38,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 3,
+                        fontFamily: 'Cormorant',
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
                     padding: const EdgeInsets.only(
-                      left: 40,
-                      top: 20,
+                      left: 50,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text(
-                          Character.username,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text(
+                            "Warrior / Lv. 1",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                        Text(
-                          '${Character.tribes} / Lv. ${Character.lv}',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text(
+                            "Gold       : 100",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                        Text(
-                          'Gold       : 100 ',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text(
+                            "Weapon : Darkblood Stormking",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                        Text(
-                          'Weapon : ',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                          ),
-                        ),
-                        Text(
-                          'Armor    : ',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Text(
+                            "Armor    : Necromancer",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ],
                     ),
                   ),
-                ),
-                Image(
-                  image: AssetImage(
-                    'assets/${Character.tribes}.png',
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           SizedBox(
-            height: 35,
+            height: 30,
           ),
           Container(
-            height: 300,
-            child: Column(
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'HP    : 200',
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              'POW : 325',
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              'CD     : 172%',
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'MANA : 100',
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              'DEF      : 80',
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Text(
-                              'CC        : 58%',
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 35,
-                ),
-                Container(
-                  child: Column(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Skill Information',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w600,
+                      ElevatedButton.icon(
+                        label: Text(
+                          'Battle',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/battle');
+                        },
+                        icon: Icon(
+                          Icons.forest,
                           color: Colors.white,
                         ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 98, 82, 70),
+                        ),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        'Heavy Slash (Character Lv. 10)',
-                        style: TextStyle(
-                          fontSize: 18,
+                      ElevatedButton.icon(
+                        label: Text(
+                          'Shop',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/shop');
+                        },
+                        icon: Icon(
+                          Icons.shopping_cart,
                           color: Colors.white,
                         ),
-                      ),
-                      Text(
-                        'Piercing Spear (Character Lv. 20)',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.red,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 98, 82, 70),
                         ),
                       ),
-                      Text(
-                        'Fireball (Character Lv.30)',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.red,
+                      ElevatedButton.icon(
+                        label: Text(
+                          'Inventory',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Headhunter (Character Lv. 40)',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.red,
+                        onPressed: () {
+                          Navigator.of(context).pushNamed('/inventory');
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 98, 82, 70),
+                        ),
+                        icon: Icon(
+                          Icons.backpack_sharp,
+                          color: Colors.white,
                         ),
                       )
                     ],
                   ),
-                ),
-              ],
+                  ElevatedButton.icon(
+                    label: Text(
+                      'Profile',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color.fromARGB(255, 98, 82, 70),
+                    ),
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
-          Container(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton.icon(
-                  label: Text(
-                    'Battle',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/battle');
-                  },
-                  icon: Icon(
-                    Icons.forest,
-                    color: Colors.white,
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 98, 82, 70),
-                  ),
-                ),
-                ElevatedButton.icon(
-                  label: Text(
-                    'Shop',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/shop');
-                  },
-                  icon: Icon(
-                    Icons.shopping_cart,
-                    color: Colors.white,
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 98, 82, 70),
-                  ),
-                ),
-                ElevatedButton.icon(
-                  label: Text(
-                    'Inventory',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/inventory');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 98, 82, 70),
-                  ),
-                  icon: Icon(
-                    Icons.backpack_sharp,
-                    color: Colors.white,
-                  ),
-                )
-              ],
-            ),
-          )
         ],
       ),
     );
