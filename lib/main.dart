@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'pages/login.dart';
-import 'pages/profile.dart';
+import 'pages/register.dart';
+import 'pages/home.dart';
 import 'pages/inventory.dart';
 import 'pages/shop.dart';
 import 'pages/battle.dart';
+import 'pages/profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,10 +20,11 @@ class MyApp extends StatelessWidget {
       initialRoute: '/registerpage',
       routes: {
         '/register': (context) => registerScreen(),
-        '/profile': (context) => ProfileScreen(),
+        '/home': (context) => HomeScreen(),
         '/inventory': (context) => InventoryScreen(),
         '/shop': (context) => ShopScreen(),
         '/battle': (context) => BattleSscreen(),
+        '/profile:': (context) => ProfileScreen(),
       },
       theme: ThemeData(
         inputDecorationTheme: InputDecorationTheme(
