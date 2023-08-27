@@ -38,20 +38,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Image(
-                    image: AssetImage('assets/Warrior.png'),
+                    image: AssetImage('assets/${Character.tribes}.png'),
                     width: 200,
                     height: 200,
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: Text(
-                      "${Character.username}",
+                      "${Character.username.toUpperCase()}",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 38,
+                        fontSize: 42,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 3,
                         fontFamily: 'Cormorant',
@@ -75,8 +72,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             "${Character.tribes} / Lv. ${Character.lv}",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                         ),
@@ -86,8 +83,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Gold       : ${Character.gold}",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                         ),
@@ -97,8 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Weapon : ${Character.weaponUsed}",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                         ),
@@ -108,8 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Armor    : ${Character.armorUsed}",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
                         ),
@@ -197,7 +194,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255, 98, 82, 70),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushNamed('/profile');
+                    },
                     icon: Icon(
                       Icons.person,
                       color: Colors.white,

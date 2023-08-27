@@ -30,7 +30,32 @@ class skill {
       this.cooldownCurrent, this.cooldownTurn);
 }
 
-List<skill> Skill = [];
+List<List<skill>> Skill = [
+  [
+    skill("Heavy Slash", 50, 50, 1, 0, 1),
+    skill("ab", 1, 1, 10, 0, 1),
+    skill("ba", 2, 2, 20, 0, 1),
+    skill("ca", 3, 3, 30, 0, 1)
+  ],
+  [
+    skill("FireBall", 50, 50, 1, 0, 1),
+    skill("aq", 1, 1, 10, 0, 1),
+    skill("be", 2, 2, 20, 0, 1),
+    skill("cd", 3, 3, 30, 0, 1)
+  ],
+  [
+    skill("QuickShot", 50, 50, 1, 0, 1),
+    skill("aw", 1, 1, 10, 0, 1),
+    skill("bd", 2, 2, 20, 0, 1),
+    skill("ca", 3, 3, 30, 0, 1)
+  ],
+  [
+    skill("Piercing Spear", 50, 50, 1, 0, 1),
+    skill("ad", 1, 1, 10, 0, 1),
+    skill("bf", 2, 2, 20, 0, 1),
+    skill("cs", 3, 3, 30, 0, 1)
+  ]
+];
 
 class weapon {
   String weaponName;
@@ -40,6 +65,33 @@ class weapon {
   weapon(this.weaponName, this.weaponPWR, this.price);
 }
 
+List<List<weapon>> Weapon = [
+  [
+    weapon("Rusted Sword", 70, 0),
+    weapon("Iron Sword", 85, 200),
+    weapon("Diamond Sword", 95, 400),
+    weapon("Emerald Sword", 110, 500)
+  ],
+  [
+    weapon("Wooden Staff", 80, 0),
+    weapon("Teak Staff", 90, 200),
+    weapon("Orc Leather Staff", 105, 400),
+    weapon("Ogre Leather Staff", 120, 500)
+  ],
+  [
+    weapon("Wooden Bow", 60, 0),
+    weapon("Teak Bow", 70, 200),
+    weapon("Orc Leather Bow", 75, 400),
+    weapon("Ogre Leather Bow", 90, 500)
+  ],
+  [
+    weapon("Rusted Spear", 55, 0),
+    weapon("Iron Spear", 65, 200),
+    weapon("Diamond Spear", 75, 400),
+    weapon("Emerald Spear", 90, 500)
+  ]
+];
+
 class armor {
   String armorName;
   int armorDEF;
@@ -47,3 +99,10 @@ class armor {
 
   armor(this.armorName, this.armorDEF, this.price);
 }
+
+List<armor> Armor = [
+  armor("Rusted Armor", 100, 10),
+  armor("Iron Armor", 110, 200),
+  armor("Diamond Armor", 120, 400),
+  armor("Emerald Armor", 135, 500)
+];
