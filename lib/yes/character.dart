@@ -1,3 +1,7 @@
+import 'dart:math';
+
+import 'package:itc/yes/tribes.dart';
+
 class Character {
   static String username = '';
   static int tribesIndex = 0;
@@ -18,29 +22,56 @@ class Character {
   static int defenseTotal = 0;
   static int ccTotal = 0;
 
-  void levelUpCheck() {}
-  void characterDies() {}
-  int checkPowerTotal() {
-    return 0;
+  void levelUpCheck() {
+    int levelUpNeed = Character.lv * 50;
+
+    if (Character.exp >= levelUpNeed) {
+      Character.lv++;
+      Character.exp = Character.exp - levelUpNeed;
+    }
   }
 
-  int checkDefenseTotal() {
-    return 0;
+  void checkPowerTotal() {
+    Character.powerTotal =
+        Tribes[Character.tribesIndex].powerBase + Character.weaponUsedStat;
   }
 
-  int checkHpMax() {
-    return 0;
+  void checkDefenseTotal() {
+    Character.defenseTotal =
+        Tribes[Character.tribesIndex].defBase + Character.armorUsedStat;
   }
 
-  int checkManaMax() {
-    return 0;
+  void checkHpMax() {
+    Character.hpMax = Tribes[Character.tribesIndex].hpBase;
   }
 
-  int checkCcTotal() {
-    return 0;
+  void checkManaMax() {
+    Character.manaMax = Tribes[Character.tribesIndex].manaBase;
   }
 
-  int checkCdTotal() {
-    return 0;
+  void checkCcTotal() {
+    Character.ccTotal = Tribes[Character.tribesIndex].ccBase;
+  }
+
+  void checkCdTotal() {
+    Character.cdTotal = Tribes[Character.tribesIndex].cdBase;
+  }
+
+  void characterDies() {
+    Random random = new Random();
+    int goldLost = random.nextInt(30) + 1;
+
+    Character.gold -= goldLost;
+    Character.hpCurrent = Character.hpMax;
+  }
+
+  void updateValue() {
+    levelUpCheck();
+    checkPowerTotal();
+    checkDefenseTotal();
+    checkHpMax();
+    checkManaMax();
+    checkCcTotal();
+    checkCdTotal();
   }
 }

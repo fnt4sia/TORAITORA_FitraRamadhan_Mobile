@@ -12,6 +12,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    Character().updateValue;
+
     return Scaffold(
       backgroundColor: Color(0xFF272829),
       appBar: AppBar(
