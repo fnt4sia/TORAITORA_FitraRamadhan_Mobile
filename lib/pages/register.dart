@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../yes/character.dart';
+import '../system/character.dart';
 
 List<String> tribes = ['Warrior', 'Mage', 'Archer', 'Lancer'];
 String tribesValue = tribes.first;

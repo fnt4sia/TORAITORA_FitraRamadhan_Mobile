@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../yes/character.dart';
-import '../yes/tribes.dart';
+import '../system/character.dart';
+import '../system/tribes.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

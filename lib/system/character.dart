@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:itc/yes/tribes.dart';
+import 'package:itc/system/tribes.dart';
 
 class Character {
   static String username = '';
