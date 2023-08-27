@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../yes/character.dart';
+import '../yes/tribes.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -38,7 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Image(
-                    image: AssetImage('assets/${Character.tribes}.png'),
+                    image: AssetImage(
+                        'assets/${Tribes[Character.tribesIndex].tribesName}.png'),
                     width: 200,
                     height: 200,
                   ),
@@ -69,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: Text(
-                            "${Character.tribes} / Lv. ${Character.lv}",
+                            "${Tribes[Character.tribesIndex].tribesName} / Lv. ${Character.lv}",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,

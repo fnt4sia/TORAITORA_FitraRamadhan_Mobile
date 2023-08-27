@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: registerScreen(),
-      initialRoute: '/registerpage',
+      initialRoute: '/register',
       routes: {
         '/register': (context) => registerScreen(),
         '/home': (context) => HomeScreen(),

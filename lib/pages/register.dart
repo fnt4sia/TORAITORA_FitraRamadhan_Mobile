@@ -3,8 +3,8 @@ import '../yes/character.dart';
 
 List<String> tribes = ['Warrior', 'Mage', 'Archer', 'Lancer'];
 String tribesValue = tribes.first;
+int tribesIndex = 1;
 bool usernameEmpty = false;
-Character char = Character();
 
 class registerScreen extends StatefulWidget {
   const registerScreen({super.key});
@@ -93,9 +93,12 @@ class _registerScreenState extends State<registerScreen> {
                     ),
                     dropdownColor: Colors.black,
                     value: tribesValue,
-                    onChanged: (String? newValue) {
+                    onChanged: (value) {
                       setState(() {
-                        if (newValue != null) tribesValue = newValue;
+                        if (value != null) {
+                          tribesValue = value;
+                          tribesIndex = tribes.indexOf(tribesValue);
+                        }
                       });
                     },
                     items: tribes.map((item) {
@@ -120,7 +123,7 @@ class _registerScreenState extends State<registerScreen> {
                           usernameEmpty = true;
                         else {
                           Character.username = textController.text;
-                          Character.tribes = tribesValue;
+                          Character.tribesIndex = tribesIndex;
                           Navigator.of(context).pushNamed('/home');
                         }
                       });

@@ -1,5 +1,6 @@
 class Character {
   static String username = '';
+  static int tribesIndex = 0;
   static String tribes = '';
   static int lv = 1;
   static int gold = 100;
@@ -7,7 +8,6 @@ class Character {
   static int weaponUsedStat = 0;
   static String armorUsed = '';
   static int armorUsedStat = 0;
-  static int classIndex = 0;
   static int exp = 0;
   static int manaMax = 0;
   static int manaCurrent = 0;
