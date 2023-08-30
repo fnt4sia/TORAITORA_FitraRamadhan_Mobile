@@ -3,7 +3,7 @@ import '../system/character.dart';
 
 List<String> tribes = ['Warrior', 'Mage', 'Archer', 'Lancer'];
 String tribesValue = tribes.first;
-int tribesIndex = 1;
+int tribesIndex = 0;
 bool usernameEmpty = false;
 
 class registerScreen extends StatefulWidget {
