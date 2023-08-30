@@ -48,8 +48,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     Image(
                       image: AssetImage(
                           'assets/${Tribes[Character.tribesIndex].tribesName}.png'),
-                      width: 200,
-                      height: 200,
+                      width: 230,
+                      height: 230,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5.0),

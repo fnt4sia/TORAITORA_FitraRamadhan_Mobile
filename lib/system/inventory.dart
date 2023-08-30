@@ -3,7 +3,7 @@ import 'package:itc/system/tribes.dart';
 import 'character.dart';
 
 class Inventory {
-  static List<String> inventoryBackpack = [];
+  static List<String> inventoryBackpack = ["Sword", "Armor"];
   static int inventorySlot = 10;
 
   int checkInventorySlot() {
