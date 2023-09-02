@@ -230,9 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
                               ),
-                              onPressed: () {
-                                Navigator.of(context).pushNamed('/home');
-                              },
+                              onPressed: () {},
                               icon: Icon(
                                 Icons.house,
                                 color: Color.fromARGB(255, 98, 82, 70),

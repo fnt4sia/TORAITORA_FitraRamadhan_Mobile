@@ -113,9 +113,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
                                 color: Color.fromARGB(255, 98, 82, 70),
                               ),
                             ),
-                            onPressed: () {
-                              Navigator.of(context).pushNamed('/inventory');
-                            },
+                            onPressed: () {},
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.white,
                             ),

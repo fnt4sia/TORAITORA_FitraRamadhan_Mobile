@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         '/inventory': (context) => InventoryScreen(),
         '/shop': (context) => ShopScreen(),
         '/battle': (context) => BattleSscreen(),
-        '/profile:': (context) => ProfileScreen(),
+        '/profile': (context) => ProfileScreen(),
       },
       theme: ThemeData(
         inputDecorationTheme: InputDecorationTheme(
