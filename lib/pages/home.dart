@@ -28,12 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(
-          top: 25,
-          bottom: 25,
-        ),
-        child: Column(
+      body: Container(
+        padding: EdgeInsets.all(15),
+        child: Stack(
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
@@ -126,93 +123,126 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        ElevatedButton.icon(
-                          label: Text(
-                            'Battle',
-                            style: TextStyle(
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ElevatedButton.icon(
+                            label: Text(
+                              'Battle',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pushNamed('/battle');
+                            },
+                            icon: Icon(
+                              Icons.forest,
                               color: Colors.white,
                             ),
-                          ),
-                          onPressed: () {
-                            Navigator.of(context).pushNamed('/battle');
-                          },
-                          icon: Icon(
-                            Icons.forest,
-                            color: Colors.white,
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 98, 82, 70),
-                          ),
-                        ),
-                        ElevatedButton.icon(
-                          label: Text(
-                            'Shop',
-                            style: TextStyle(
-                              color: Colors.white,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 98, 82, 70),
                             ),
                           ),
-                          onPressed: () {
-                            Navigator.of(context).pushNamed('/shop');
-                          },
-                          icon: Icon(
-                            Icons.shopping_cart,
-                            color: Colors.white,
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 98, 82, 70),
-                          ),
-                        ),
-                        ElevatedButton.icon(
-                          label: Text(
-                            'Inventory',
-                            style: TextStyle(
+                          ElevatedButton.icon(
+                            label: Text(
+                              'Shop',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pushNamed('/shop');
+                            },
+                            icon: Icon(
+                              Icons.shopping_cart,
                               color: Colors.white,
                             ),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 98, 82, 70),
+                            ),
                           ),
-                          onPressed: () {
-                            Navigator.of(context).pushNamed('/inventory');
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 98, 82, 70),
+                          ElevatedButton.icon(
+                            label: Text(
+                              'Inventory',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pushNamed('/inventory');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color.fromARGB(255, 98, 82, 70),
+                            ),
+                            icon: Icon(
+                              Icons.backpack_sharp,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            child: ElevatedButton.icon(
+                              label: Text(
+                                'Profile',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Color.fromARGB(255, 98, 82, 70),
+                              ),
+                              onPressed: () {
+                                Navigator.of(context).pushNamed('/profile');
+                              },
+                              icon: Icon(
+                                Icons.person,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
-                          icon: Icon(
-                            Icons.backpack_sharp,
-                            color: Colors.white,
+                          SizedBox(
+                            width: 15,
                           ),
-                        )
-                      ],
-                    ),
-                    ElevatedButton.icon(
-                      label: Text(
-                        'Profile',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 98, 82, 70),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).pushNamed('/profile');
-                      },
-                      icon: Icon(
-                        Icons.person,
-                        color: Colors.white,
-                      ),
-                    )
-                  ],
+                          Expanded(
+                            child: ElevatedButton.icon(
+                              label: Text(
+                                'Home',
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 98, 82, 70)),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.white,
+                              ),
+                              onPressed: () {
+                                Navigator.of(context).pushNamed('/home');
+                              },
+                              icon: Icon(
+                                Icons.house,
+                                color: Color.fromARGB(255, 98, 82, 70),
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
