@@ -37,16 +37,21 @@ class _InventoryScreenState extends State<InventoryScreen> {
                 for (int i = 0; i < Inventory.inventoryBackpack.length; i++)
                   Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        color: Colors.black,
-                      ),
-                      child: Center(
-                        child: Text(
-                          '${Inventory.inventoryBackpack[i]}',
-                          style: TextStyle(
-                            color: Colors.white,
+                    child: InkWell(
+                      onTap: () {
+                        showItemDesc(context);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: Colors.black,
+                        ),
+                        child: Center(
+                          child: Text(
+                            '${Inventory.inventoryBackpack[i]}',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
@@ -180,4 +185,109 @@ class _InventoryScreenState extends State<InventoryScreen> {
       ),
     );
   }
+}
+
+showItemDesc(context) {
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: Colors.transparent,
+    builder: (BuildContext context) {
+      return Container(
+        height: MediaQuery.of(context).size.height * 0.5,
+        decoration: BoxDecoration(
+          color: Color.fromARGB(255, 0, 0, 0),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+          ),
+        ),
+        padding: const EdgeInsets.only(
+          top: 40,
+          left: 40,
+          right: 40,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Sword',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Lv. 1',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              'Pow : 250',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'This sword is crafted by the legendary blacksmith "GRID" himself to be used by the hero.',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w300,
+                wordSpacing: 2,
+              ),
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Use',
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF272829),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Remove',
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF272829),
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
+      );
+    },
+  );
 }
