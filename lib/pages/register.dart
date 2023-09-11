@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../system/character.dart';
+import '../system/inventory.dart';
+import '../system/tribes.dart';
 
 List<String> tribes = ['Warrior', 'Mage', 'Archer', 'Lancer'];
 String tribesValue = tribes.first;
@@ -124,6 +126,9 @@ class _registerScreenState extends State<registerScreen> {
                         else {
                           Character.username = textController.text;
                           Character.tribesIndex = tribesIndex;
+                          Inventory.inventoryBackpack
+                              .add(Weapon[tribesIndex][0].weaponName);
+                          Inventory.inventoryBackpack.add(Armor[0].armorName);
                           Navigator.of(context).pushNamed('/home');
                         }
                       });

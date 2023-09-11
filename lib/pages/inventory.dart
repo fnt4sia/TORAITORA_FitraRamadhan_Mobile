@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:itc/pages/register.dart';
 import '../system/inventory.dart';
+import '../system/tribes.dart';
+import '../system/character.dart';
 
 class InventoryScreen extends StatefulWidget {
   const InventoryScreen({super.key});
@@ -39,7 +42,10 @@ class _InventoryScreenState extends State<InventoryScreen> {
                     padding: const EdgeInsets.all(10.0),
                     child: InkWell(
                       onTap: () {
-                        showItemDesc(context);
+                        showItemDesc(
+                          context,
+                          Inventory.inventoryBackpack[i],
+                        );
                       },
                       child: Container(
                         decoration: BoxDecoration(
@@ -187,7 +193,24 @@ class _InventoryScreenState extends State<InventoryScreen> {
   }
 }
 
-showItemDesc(context) {
+showItemDesc(context, String item) {
+  bool isWeapon = true;
+  int armorIndex = 0, weaponIndex = 0;
+  if (item.contains('Armor')) {
+    for (int i = 0; i < Armor.length; i++) {
+      if (item == Armor[i].armorName) {
+        armorIndex = i;
+        isWeapon = false;
+      }
+    }
+  } else {
+    for (int i = 0; i < Armor.length; i++) {
+      if (item == Weapon[tribesIndex][i]) {
+        weaponIndex = i;
+      }
+    }
+  }
+
   showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,
@@ -210,7 +233,7 @@ showItemDesc(context) {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Sword',
+              '${item}',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 30,
@@ -233,7 +256,9 @@ showItemDesc(context) {
               height: 5,
             ),
             Text(
-              'Pow : 250',
+              isWeapon
+                  ? 'POW : ${Weapon[tribesIndex][weaponIndex].weaponPWR}'
+                  : 'DEF : ${Armor[armorIndex].armorDEF}',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
@@ -260,7 +285,18 @@ showItemDesc(context) {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (isWeapon) {
+                        Character.weaponUsed =
+                            Weapon[tribesIndex][weaponIndex].weaponName;
+                        Character.weaponUsedStat =
+                            Weapon[tribesIndex][weaponIndex].weaponPWR;
+                      } else {
+                        Character.armorUsed = Armor[armorIndex].armorName;
+                        Character.armorUsedStat = Armor[armorIndex].armorDEF;
+                      }
+                      Navigator.pop(context);
+                    },
                     child: Text(
                       'Use',
                     ),
@@ -274,7 +310,9 @@ showItemDesc(context) {
                 ),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: Text(
                       'Remove',
                     ),
