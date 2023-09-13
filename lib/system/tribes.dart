@@ -104,5 +104,9 @@ List<armor> Armor = [
   armor("Rusted Armor", 100, 10),
   armor("Iron Armor", 110, 200),
   armor("Diamond Armor", 120, 400),
-  armor("Emerald Armor", 135, 500)
+  armor("Emerald Armor", 135, 500),
+  armor("a", 100, 200),
+  armor("as", 300, 500),
+  armor("b", 300, 700),
+  armor("c", 500, 100),
 ];

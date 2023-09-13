@@ -129,6 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
               right: 0,
               child: Container(
                 width: MediaQuery.of(context).size.width,
+                color: Color(0xFF272829),
                 child: Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
